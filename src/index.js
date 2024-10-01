@@ -1,6 +1,6 @@
 import * as React from "react";
 import { render } from "react-dom";
-import Dashboard from "../components/dashboard";
+import Dashboard from "./components/dashboard";
 
 import {
   NoneResponse,
@@ -19,9 +19,9 @@ import {
   PageScanAborted,
   NonLicensedDomain,
   AccessDenied,
-  Redirected
+  Redirected,
 } from "./ResponseComponent";
-import Home from "../routes/Home";
+import Home from "./routes/Home";
 
 <Dashboard />;
 

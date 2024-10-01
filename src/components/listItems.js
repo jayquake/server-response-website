@@ -4,7 +4,7 @@ import ErrorIcon from "@mui/icons-material/Error"; // NotFound, InternalError, e
 import BlockIcon from "@mui/icons-material/Block"; // Blocked, AccessDenied, etc.
 import CloudOffIcon from "@mui/icons-material/CloudOff"; // BlockedByCloudflare, etc.
 import TimeoutIcon from "@mui/icons-material/TimerOff"; // PageTimeout, etc.
-import CustomNavLink from "../components/customNavLink"; // Ensure this is the correct path
+import CustomNavLink from "./customNavLink"; // Ensure this is the correct path
 
 export const mainListItems = (
   <React.Fragment>

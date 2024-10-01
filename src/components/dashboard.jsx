@@ -13,31 +13,31 @@ import Badge from "@mui/material/Badge";
 import MenuIcon from "@mui/icons-material/Menu";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import NotificationsIcon from "@mui/icons-material/Notifications";
-import { mainListItems, secondaryListItems } from "./listItems";
+import { mainListItems } from "./listItems";
 import { Outlet } from "react-router-dom";
 
 const drawerWidth = 240;
 
 const AppBar = styled(MuiAppBar, {
-  shouldForwardProp: (prop) => prop !== "open"
+  shouldForwardProp: (prop) => prop !== "open",
 })(({ theme, open }) => ({
   zIndex: theme.zIndex.drawer + 1,
   transition: theme.transitions.create(["width", "margin"], {
     easing: theme.transitions.easing.sharp,
-    duration: theme.transitions.duration.leavingScreen
+    duration: theme.transitions.duration.leavingScreen,
   }),
   ...(open && {
     marginLeft: drawerWidth,
     width: `calc(100% - ${drawerWidth}px)`,
     transition: theme.transitions.create(["width", "margin"], {
       easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.enteringScreen
-    })
-  })
+      duration: theme.transitions.duration.enteringScreen,
+    }),
+  }),
 }));
 
 const Drawer = styled(MuiDrawer, {
-  shouldForwardProp: (prop) => prop !== "open"
+  shouldForwardProp: (prop) => prop !== "open",
 })(({ theme, open }) => ({
   "& .MuiDrawer-paper": {
     position: "relative",
@@ -45,21 +45,21 @@ const Drawer = styled(MuiDrawer, {
     width: drawerWidth,
     transition: theme.transitions.create("width", {
       easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.enteringScreen
+      duration: theme.transitions.duration.enteringScreen,
     }),
     boxSizing: "border-box",
     ...(!open && {
       overflowX: "hidden",
       transition: theme.transitions.create("width", {
         easing: theme.transitions.easing.sharp,
-        duration: theme.transitions.duration.leavingScreen
+        duration: theme.transitions.duration.leavingScreen,
       }),
       width: theme.spacing(7),
       [theme.breakpoints.up("sm")]: {
-        width: theme.spacing(9)
-      }
-    })
-  }
+        width: theme.spacing(9),
+      },
+    }),
+  },
 }));
 
 // TODO remove, this demo shouldn't need to reset the theme.
@@ -78,7 +78,7 @@ export default function Dashboard() {
         <AppBar position="absolute" open={open}>
           <Toolbar
             sx={{
-              pr: "24px" // keep right padding when drawer closed
+              pr: "24px", // keep right padding when drawer closed
             }}
           >
             <IconButton
@@ -88,7 +88,7 @@ export default function Dashboard() {
               onClick={toggleDrawer}
               sx={{
                 marginRight: "3px",
-                ...(open && { display: "none" })
+                ...(open && { display: "none" }),
               }}
             >
               <MenuIcon />
@@ -116,7 +116,7 @@ export default function Dashboard() {
               display: "flex",
               alignItems: "center",
               justifyContent: "flex-end",
-              px: [1]
+              px: [1],
             }}
           >
             <IconButton onClick={toggleDrawer}>
@@ -140,7 +140,7 @@ export default function Dashboard() {
             flexGrow: 1,
             height: "100vh",
             width: `calc(100% - ${drawerWidth}px)`,
-            overflow: "auto"
+            overflow: "auto",
           }}
         >
           <Toolbar />
